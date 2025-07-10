@@ -19,9 +19,7 @@ public class AuthenticationService {
 
     public TokenDTO authenticate(LoginDTO loginRequest) {
         String jwt = getJwt(loginRequest);
-        Long expiration = jwtUtil.extractExpirationMillis(jwt);
-
-        return TokenDTO.of(expiration, jwt);
+        return TokenDTO.of(jwt);
     }
 
     private String getJwt(LoginDTO loginRequest) {
