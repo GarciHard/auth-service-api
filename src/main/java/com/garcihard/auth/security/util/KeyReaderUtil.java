@@ -24,7 +24,7 @@ public class KeyReaderUtil {
 
     private static byte[] readAllBytes(InputStream inputStream) throws IOException {
         if (inputStream == null) {
-            throw new IllegalArgumentException("Secret not found");
+            throw new IllegalArgumentException("Private Secret not found");
         }
         return inputStream.readAllBytes();
     }
